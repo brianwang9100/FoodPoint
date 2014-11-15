@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <Firebase/Firebase.h>
 
 @interface ViewController ()
 
@@ -23,11 +22,12 @@
     
     _nameTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     _nameTextField.delegate = self;
+    _nameTextField.placeholder = @"Your Name Here";
     
-    _buybutton addTarget:self action:@selector(buy) forControlEvents:<#(UIControlEvents)#>
+    [_buyButton addTarget:self action:@selector(buy) forControlEvents:UIControlEventTouchUpInside];
+    [_sellButton addTarget:self action:@selector(sell) forControlEvents:UIControlEventTouchUpInside];
     
     _defaults = [NSUserDefaults standardUserDefaults];
-    [_defaults synchronize];
     
     
     
@@ -57,10 +57,29 @@
 
 -(void) buy {
     NSLog(@"BUYBITCH");
+    if (_nameTextField.text.length == 0) {
+        _messageLabel.text = @"Please enter a name!";
+        _messageLabel.hidden = FALSE;
+        return;
+    }
+    
+    [_defaults setObject:_nameTextField.text forKey:@"buyerName"];
+    [_defaults synchronize];
+    
+    [self performSegueWithIdentifier:@"buySegue" sender:self];
+    
+    
 }
 
 -(void) sell {
     NSLog(@"SELLBITCH");
+    if (_nameTextField.text.length == 0) {
+        _messageLabel.text = @"Please enter a name!";
+        return;
+    }
+    
+    [_defaults setObject:_nameTextField.text forKey:@"sellerName"];
+    [_defaults synchronize];
 }
 
 @end

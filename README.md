@@ -1,4 +1,4 @@
-#Food Point
+Food Point
 ========================================
 ## Authors
  - Brian Wang

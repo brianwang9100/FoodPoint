@@ -14,6 +14,7 @@
 		17EEB9691A1806F300CB7DEC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB9681A1806F300CB7DEC /* CFNetwork.framework */; };
 		17EEB96B1A18070100CB7DEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB96A1A18070100CB7DEC /* SystemConfiguration.framework */; };
 		DF13803D1A180D2A0057522A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DF13803C1A180D2A0057522A /* README.md */; };
+		DF1380401A1819CE0057522A /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF13803F1A1819CE0057522A /* BuyViewController.m */; };
 		DF5F6BC81A17ED8B006E5CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BC71A17ED8B006E5CA6 /* main.m */; };
 		DF5F6BCB1A17ED8B006E5CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCA1A17ED8B006E5CA6 /* AppDelegate.m */; };
 		DF5F6BCE1A17ED8B006E5CA6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 		17EEB9681A1806F300CB7DEC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		17EEB96A1A18070100CB7DEC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DF13803C1A180D2A0057522A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		DF13803E1A1819CE0057522A /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuyViewController.h; path = ../BuyViewController.h; sourceTree = "<group>"; };
+		DF13803F1A1819CE0057522A /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuyViewController.m; path = ../BuyViewController.m; sourceTree = "<group>"; };
 		DF5F6BC21A17ED8B006E5CA6 /* FoodPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5F6BC61A17ED8B006E5CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF5F6BC71A17ED8B006E5CA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				DF5F6BCA1A17ED8B006E5CA6 /* AppDelegate.m */,
 				DF5F6BCC1A17ED8B006E5CA6 /* ViewController.h */,
 				DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */,
+				DF13803E1A1819CE0057522A /* BuyViewController.h */,
+				DF13803F1A1819CE0057522A /* BuyViewController.m */,
 				DF5F6BCF1A17ED8B006E5CA6 /* Main.storyboard */,
 				DF5F6BD21A17ED8B006E5CA6 /* Images.xcassets */,
 				DF5F6BD41A17ED8B006E5CA6 /* LaunchScreen.xib */,
@@ -251,6 +256,7 @@
 				DF5F6BCB1A17ED8B006E5CA6 /* AppDelegate.m in Sources */,
 				DF13803D1A180D2A0057522A /* README.md in Sources */,
 				DF5F6BC81A17ED8B006E5CA6 /* main.m in Sources */,
+				DF1380401A1819CE0057522A /* BuyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
