@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17EEB9611A18063200CB7DEC /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB9601A18063200CB7DEC /* Firebase.framework */; };
+		17EEB9631A1806A700CB7DEC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB9621A1806A700CB7DEC /* Security.framework */; };
+		17EEB9651A1806B500CB7DEC /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB9641A1806B500CB7DEC /* libicucore.dylib */; };
+		17EEB9671A1806BF00CB7DEC /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB9661A1806BF00CB7DEC /* libc++.dylib */; };
+		17EEB9691A1806F300CB7DEC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB9681A1806F300CB7DEC /* CFNetwork.framework */; };
+		17EEB96B1A18070100CB7DEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB96A1A18070100CB7DEC /* SystemConfiguration.framework */; };
 		DF5F6BC81A17ED8B006E5CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BC71A17ED8B006E5CA6 /* main.m */; };
 		DF5F6BCB1A17ED8B006E5CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCA1A17ED8B006E5CA6 /* AppDelegate.m */; };
 		DF5F6BCE1A17ED8B006E5CA6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */; };
@@ -27,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17EEB9601A18063200CB7DEC /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		17EEB9621A1806A700CB7DEC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		17EEB9641A1806B500CB7DEC /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		17EEB9661A1806BF00CB7DEC /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		17EEB9681A1806F300CB7DEC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		17EEB96A1A18070100CB7DEC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DF5F6BC21A17ED8B006E5CA6 /* FoodPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5F6BC61A17ED8B006E5CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF5F6BC71A17ED8B006E5CA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +59,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17EEB96B1A18070100CB7DEC /* SystemConfiguration.framework in Frameworks */,
+				17EEB9691A1806F300CB7DEC /* CFNetwork.framework in Frameworks */,
+				17EEB9671A1806BF00CB7DEC /* libc++.dylib in Frameworks */,
+				17EEB9651A1806B500CB7DEC /* libicucore.dylib in Frameworks */,
+				17EEB9631A1806A700CB7DEC /* Security.framework in Frameworks */,
+				17EEB9611A18063200CB7DEC /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +81,12 @@
 		DF5F6BB91A17ED8B006E5CA6 = {
 			isa = PBXGroup;
 			children = (
+				17EEB96A1A18070100CB7DEC /* SystemConfiguration.framework */,
+				17EEB9681A1806F300CB7DEC /* CFNetwork.framework */,
+				17EEB9661A1806BF00CB7DEC /* libc++.dylib */,
+				17EEB9641A1806B500CB7DEC /* libicucore.dylib */,
+				17EEB9621A1806A700CB7DEC /* Security.framework */,
+				17EEB9601A18063200CB7DEC /* Firebase.framework */,
 				DF5F6BC41A17ED8B006E5CA6 /* FoodPoint */,
 				DF5F6BDE1A17ED8B006E5CA6 /* FoodPointTests */,
 				DF5F6BC31A17ED8B006E5CA6 /* Products */,
@@ -347,8 +371,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brian Wang (WFG337ZWR6)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FoodPoint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -358,8 +387,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brian Wang (WFG337ZWR6)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FoodPoint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -417,6 +451,7 @@
 				DF5F6BE71A17ED8B006E5CA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF5F6BE81A17ED8B006E5CA6 /* Build configuration list for PBXNativeTarget "FoodPointTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +460,7 @@
 				DF5F6BEA1A17ED8B006E5CA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
