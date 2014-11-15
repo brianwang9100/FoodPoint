@@ -13,7 +13,9 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    NSUserDefaults *_defaults;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,6 +23,14 @@
     
     _nameTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     _nameTextField.delegate = self;
+    
+    _buybutton addTarget:self action:@selector(buy) forControlEvents:<#(UIControlEvents)#>
+    
+    _defaults = [NSUserDefaults standardUserDefaults];
+    [_defaults synchronize];
+    
+    
+    
 }
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -45,5 +55,12 @@
     return NO;
 }
 
+-(void) buy {
+    NSLog(@"BUYBITCH");
+}
+
+-(void) sell {
+    NSLog(@"SELLBITCH");
+}
 
 @end

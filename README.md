@@ -4,8 +4,7 @@
  - Brian Wang
  - Matt O'hagan
  - Diva Hurtado
-
- - Connor Overman
+ - Trevor Overman
 
 ## Description
 Application to connect farmers and food desert consumers
