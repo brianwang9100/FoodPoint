@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Firebase/Firebase.h>
 
 @interface ViewController ()
 
@@ -30,8 +31,7 @@
     _defaults = [NSUserDefaults standardUserDefaults];
     
     
-    
-}
+
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [_nameTextField resignFirstResponder];
