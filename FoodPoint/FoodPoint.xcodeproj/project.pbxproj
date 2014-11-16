@@ -43,6 +43,11 @@
 		DF1380831A18A1F60057522A /* sell-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = DF13807B1A18A1F60057522A /* sell-btn.png */; };
 		DF1380841A18A1F60057522A /* walking-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = DF13807C1A18A1F60057522A /* walking-btn.png */; };
 		DF1380851A18A1F60057522A /* wood-pf.png in Resources */ = {isa = PBXBuildFile; fileRef = DF13807D1A18A1F60057522A /* wood-pf.png */; };
+		DF1380871A18B5340057522A /* search-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1380861A18B5340057522A /* search-btn.png */; };
+		DF1380891A18B5370057522A /* icon-green.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1380881A18B5370057522A /* icon-green.png */; };
+		DF13808B1A18B53B0057522A /* icon-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = DF13808A1A18B53B0057522A /* icon-blue.png */; };
+		DF13808E1A18CF9D0057522A /* ConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF13808D1A18CF9D0057522A /* ConfirmationViewController.m */; };
+		DF1380901A18D7970057522A /* confirmbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = DF13808F1A18D7970057522A /* confirmbutton.png */; };
 		DF5F6BC81A17ED8B006E5CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BC71A17ED8B006E5CA6 /* main.m */; };
 		DF5F6BCB1A17ED8B006E5CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCA1A17ED8B006E5CA6 /* AppDelegate.m */; };
 		DF5F6BCE1A17ED8B006E5CA6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */; };
@@ -106,6 +111,12 @@
 		DF13807B1A18A1F60057522A /* sell-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sell-btn.png"; sourceTree = "<group>"; };
 		DF13807C1A18A1F60057522A /* walking-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "walking-btn.png"; sourceTree = "<group>"; };
 		DF13807D1A18A1F60057522A /* wood-pf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wood-pf.png"; sourceTree = "<group>"; };
+		DF1380861A18B5340057522A /* search-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-btn.png"; sourceTree = "<group>"; };
+		DF1380881A18B5370057522A /* icon-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-green.png"; sourceTree = "<group>"; };
+		DF13808A1A18B53B0057522A /* icon-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-blue.png"; sourceTree = "<group>"; };
+		DF13808C1A18CF9D0057522A /* ConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfirmationViewController.h; path = ../Images/ConfirmationViewController.h; sourceTree = "<group>"; };
+		DF13808D1A18CF9D0057522A /* ConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfirmationViewController.m; path = ../Images/ConfirmationViewController.m; sourceTree = "<group>"; };
+		DF13808F1A18D7970057522A /* confirmbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confirmbutton.png; sourceTree = "<group>"; };
 		DF5F6BC21A17ED8B006E5CA6 /* FoodPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5F6BC61A17ED8B006E5CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF5F6BC71A17ED8B006E5CA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -158,6 +169,10 @@
 		DF1380751A18A1F60057522A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DF13808A1A18B53B0057522A /* icon-blue.png */,
+				DF1380881A18B5370057522A /* icon-green.png */,
+				DF1380861A18B5340057522A /* search-btn.png */,
+				DF13808F1A18D7970057522A /* confirmbutton.png */,
 				DF1380761A18A1F60057522A /* bg-fp.jpg */,
 				DF1380771A18A1F60057522A /* buy-btn.png */,
 				DF1380781A18A1F60057522A /* car-btn.png */,
@@ -231,6 +246,8 @@
 				17EEB96F1A18767F00CB7DEC /* SellViewController.m */,
 				DF1380701A188C250057522A /* SellIntermediateViewController.h */,
 				DF1380711A188C250057522A /* SellIntermediateViewController.m */,
+				DF13808C1A18CF9D0057522A /* ConfirmationViewController.h */,
+				DF13808D1A18CF9D0057522A /* ConfirmationViewController.m */,
 				DF1380731A189F570057522A /* Main.storyboard */,
 				DF5F6BD21A17ED8B006E5CA6 /* Images.xcassets */,
 				DF5F6BD41A17ED8B006E5CA6 /* LaunchScreen.xib */,
@@ -354,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1380891A18B5370057522A /* icon-green.png in Resources */,
 				DF1380841A18A1F60057522A /* walking-btn.png in Resources */,
 				DF1380831A18A1F60057522A /* sell-btn.png in Resources */,
 				DF1380851A18A1F60057522A /* wood-pf.png in Resources */,
@@ -365,7 +383,10 @@
 				DF13807F1A18A1F60057522A /* buy-btn.png in Resources */,
 				DF1380541A184AB30057522A /* GoogleMaps.bundle in Resources */,
 				DF1380801A18A1F60057522A /* car-btn.png in Resources */,
+				DF1380871A18B5340057522A /* search-btn.png in Resources */,
 				DF1380741A189F570057522A /* Main.storyboard in Resources */,
+				DF1380901A18D7970057522A /* confirmbutton.png in Resources */,
+				DF13808B1A18B53B0057522A /* icon-blue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF13808E1A18CF9D0057522A /* ConfirmationViewController.m in Sources */,
 				DF1380461A1834A70057522A /* Seller.m in Sources */,
 				17EEB96D1A18745700CB7DEC /* firebaseFunc.m in Sources */,
 				DF5F6BCE1A17ED8B006E5CA6 /* ViewController.m in Sources */,

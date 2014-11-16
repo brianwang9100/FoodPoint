@@ -21,7 +21,6 @@
     
     _emailTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     _emailTextField.keyboardType = UIKeyboardTypeEmailAddress;
-    _emailTextField.delegate = self;
     _emailTextField.placeholder = @"Your Email Here!";
     
     [_walkingButton addTarget:self action:@selector(walk) forControlEvents:UIControlEventTouchUpInside];
@@ -52,6 +51,7 @@
     if([segue.identifier isEqualToString:@"segue"]) {
         BuyViewController *controller = (BuyViewController*) segue.destinationViewController;
         Buyer* myBuyer = [[Buyer alloc] initWithName:_nameTextField.text withEmail:_emailTextField.text];
+        [controller setEmail:_emailTextField.text];
         controller.trans = _trans;
         controller.thisBuyer = myBuyer;
     }

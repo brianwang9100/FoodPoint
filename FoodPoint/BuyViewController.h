@@ -15,9 +15,10 @@
 
 @interface BuyViewController : UIViewController<CLLocationManagerDelegate>
 @property (strong, nonatomic) Buyer *thisBuyer;
-@property(nonatomic,retain) CLLocationManager *locationManager;
+@property (nonatomic,retain) CLLocationManager *locationManager;
 @property (assign, nonatomic) BOOL firstTimeUse;
 @property (assign, nonatomic) BOOL trans;
+@property (assign, nonatomic) NSString *email;
 
-
+-(void) setEmail: (NSString *) email;
 @end

@@ -12,8 +12,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import <GoogleMaps/GoogleMaps.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "ConfirmationViewController.h"
 
-@interface SellViewController : UIViewController<CLLocationManagerDelegate>
+@interface SellViewController : UIViewController<CLLocationManagerDelegate, GMSMapViewDelegate>
 @property (strong, nonatomic) Seller *thisSeller;
 @property(nonatomic,retain) CLLocationManager *locationManager;
 @property (assign, nonatomic) BOOL firstTimeUse;

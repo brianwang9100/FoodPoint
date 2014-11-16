@@ -63,7 +63,7 @@
     NSDictionary *buyer = @{
                             @"lat": [NSString stringWithFormat: @"%f", _locationManager.location.coordinate.latitude],
                             @"lon": [NSString stringWithFormat:@"%f", _locationManager.location.coordinate.longitude],
-                            @"email": _thisBuyer.email,
+                            @"email": @"mattieoha@gmail.com",
                             @"trans": [NSString stringWithFormat: @"%d", _trans]
                             };
     
@@ -134,4 +134,7 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
 }
 */
 
+-(void) setEmail: (NSString *) email {
+    _email = email;
+}
 @end
