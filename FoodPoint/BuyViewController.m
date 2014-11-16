@@ -78,7 +78,7 @@
         GMSMarker *marker = [[GMSMarker alloc] init];
         marker.icon = [GMSMarker markerImageWithColor: [UIColor blueColor]];
         marker.position = CLLocationCoordinate2DMake(point.x, point.y);
-        marker.title = @"Selected Market";
+        marker.title = @"Durham Farmer's Market";
         marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.snippet = [NSString stringWithFormat:@"%d sellers", [snapshot.value[@"sellers"] count]];
         marker.map = mapView_;
@@ -113,7 +113,13 @@
 //    [_locationManager stopUpdatingLocation];
 //}
 //
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"buyerConfirmationSegue"]) {
+        BuyerConfirmationViewController *controller = (BuyerConfirmationViewController*) segue.destinationViewController;
+        controller.thisBuyer = _thisBuyer;
 
+    }
+}
 - (void)mapView:(GMSMapView *)mapView
 didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
     NSLog(@"You tapped at %f,%f", coordinate.latitude, coordinate.longitude);
@@ -122,6 +128,13 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
+    //    if ([marker.snippet containsString: @"segue"]) {
+    [self performSegueWithIdentifier:@"buyerConfirmationSegue" sender:self];
+    //
+    //    }
 }
 
 /*
@@ -135,6 +148,7 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
 */
 
 -(void) setEmail: (NSString *) email {
+    NSLog(email);
     _email = email;
 }
 @end
