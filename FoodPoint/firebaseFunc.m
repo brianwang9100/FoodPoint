@@ -54,19 +54,19 @@
 //}];
 //
 //
-///*
+//
 // // set a buyer in firebase
 // NSString *trans = @"walk";  // or @"car"
 // 
 // NSDictionary *buyer = @{
 // @"lat": @34.54,
 // @"lon": @45.345323,
+// @"email": @"yoloswag@gmail.com",
 // @"trans": trans
 // };
 // 
 // Firebase *newBuyerRef = [buyersRef childByAutoId];
 // [newBuyerRef setValue: buyer];
-// */
 //
 //
 //// set a market

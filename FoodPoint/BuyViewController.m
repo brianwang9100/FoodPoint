@@ -20,7 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _thisBuyer = [[Buyer alloc] initWithName:@"BitchAss" withEmail: @"bitchass@gmail.com" withTrans:true];
+    
     [self currentLocationIdentifier];
+    
 }
 -(void) currentLocationIdentifier {
     //---- For getting current gps location
@@ -48,27 +51,60 @@
     mapView_.settings.compassButton = YES;
     mapView_.settings.myLocationButton = YES;
     mapView_.myLocationEnabled = YES;
+    [_locationManager stopUpdatingLocation];
+    
+    NSString *baseURL = @"https://shining-heat-3529.firebaseio.com/";
+    
+    Firebase *rootRef = [[Firebase alloc] initWithUrl:baseURL];
+    Firebase *buyersRef = [rootRef childByAppendingPath: @"buyers"];
+    Firebase *marketsRef = [rootRef childByAppendingPath: @"markets"];
+    
+    //sending buyer information
+    NSDictionary *buyer = @{
+                            @"lat": [NSString stringWithFormat: @"%f", _locationManager.location.coordinate.latitude],
+                            @"lon": [NSString stringWithFormat:@"%f", _locationManager.location.coordinate.longitude],
+                            @"email": _thisBuyer.email,
+                            @"trans": [NSString stringWithFormat: @"%d", _thisBuyer.trans ]
+                            };
+    
+    Firebase *newBuyerRef = [buyersRef childByAppendingPath: _thisBuyer.name];
+    [newBuyerRef setValue: buyer];
+    
+    //retreiving market information
+    [[marketsRef queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+        CGPoint point = [self convertToLocation: snapshot];
+        NSLog([NSString stringWithFormat:@"%f, %f", point.x, point.y]);
+        
+        if (GMSGeometryIsLocationOnPathTolerance(point.x, point.y, <#GMSPath *path#>, <#BOOL geodesic#>, <#CLLocationDistance tolerance#>))
+        
+        GMSMarker *marker = [GMSMarker markerImageWithColor:[UIColor blueColor]];
+        marker.position = CLLocationCoordinate2DMake(point.x, point.y);
+        marker.title = @"Selected Market";
+        marker.appearAnimation = kGMSMarkerAnimationPop;
+//        marker.snippet = [NSString stringWithFormat:@"%d sellers", snapshot.childrenCount[@"sellers"]];
+        marker.map = mapView_;
+    }];
+    
     self.view = mapView_;
     
-    if (_firstTimeUse) {
-        
-    }
-    
-    [_locationManager stopUpdatingLocation];
-
 }
-
+- (CGPoint) convertToLocation:(FDataSnapshot*) snap {
+    NSString *lat = snap.value[@"lat"];
+    NSString *lon = snap.value[@"lon"];
+    CGPoint point = CGPointFromString([NSString stringWithFormat:@"{%@,%@}",lat, lon]);
+    return point;
+}
 
 //- (void)locationManager:(CLLocationManager *)locationManager didUpdateLocations:(NSArray *)locations {
 //    NSLog(@"%f, %f", locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude);
 //    
 ////    CLLocation *currentLocation = [locations objectAtIndex:0];
-////    GMSMarker *marker = [[GMSMarker alloc] init];
-////    marker.position = CLLocationCoordinate2DMake(locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude);
-////    marker.title = @"Current Location";
-////    marker.snippet = @"lilbitchass";
-////    marker.map = mapView_;
-//    
+//    GMSMarker *marker = [[GMSMarker alloc] init];
+//    marker.position = CLLocationCoordinate2DMake(locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude);
+//    marker.title = @"Current Location";
+//    marker.snippet = @"lilbitchass";
+//    marker.map = mapView_;
+//
 //    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: locationManager.location.coordinate.latitude
 //                                                            longitude: locationManager.location.coordinate.longitude
 //                                                                 zoom:13];
@@ -89,11 +125,6 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc {
-//    [mapView_ removeObserver:self
-//                  forKeyPath:@"myLocation"
-//                     context:NULL];
-}
 /*
 #pragma mark - Navigation
 

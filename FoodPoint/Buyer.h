@@ -10,6 +10,7 @@
 @interface Buyer : NSObject
 
 @property (strong, nonatomic) NSString *name;
-@property (assign, nonatomic) BOOL walking;
--(id) initWithName:(NSString*) name withWalking: (BOOL) walking;
+@property (assign, nonatomic) NSString *email;
+@property (assign, nonatomic) BOOL trans;
+-(id) initWithName:(NSString*) name withEmail: (NSString*) email withTrans: (BOOL) trans;
 @end

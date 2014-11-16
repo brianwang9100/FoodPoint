@@ -10,9 +10,10 @@
 
 @implementation Buyer
 
--(id) initWithName:(NSString*) name withWalking: (BOOL) walking {
+-(id) initWithName:(NSString*) name withEmail: (NSString*) email withTrans: (BOOL) trans {
     _name = name;
-    _walking = walking;
+    _email = email;
+    _trans = trans;
     return self;
 }
 
