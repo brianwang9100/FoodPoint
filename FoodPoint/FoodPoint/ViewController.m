@@ -81,6 +81,13 @@
         BuyViewController *controller = (BuyViewController*) segue.destinationViewController;
         Buyer *myBuyer = [[Buyer alloc] initWithName:_nameTextField.text withWalking: _walking];
         controller.thisBuyer = myBuyer;
+        controller.firstTimeUse = false;
+        if ([_defaults boolForKey:@"alreadyUsed"] == false) {
+            controller.firstTimeUse = true;
+        }
+        
+        [_defaults setBool:true forKey:@"alreadyUsed"];
+        [_defaults synchronize];
     }
 }
 

@@ -25,51 +25,58 @@
 -(void) currentLocationIdentifier {
     //---- For getting current gps location
     mapView_.myLocationEnabled = YES;
-    mapView_.settings.compassButton = YES;
-    mapView_.settings.myLocationButton = YES;
-    mapView_.myLocationEnabled = YES;
     
     if ([CLLocationManager locationServicesEnabled]) {
-        _locationManager = [[CLLocationManager alloc] init];
-        _locationManager.delegate = self;
-        _locationManager.distanceFilter = kCLDistanceFilterNone;
-        _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-        if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-            [_locationManager requestWhenInUseAuthorization];
+        if (_locationManager == nil) {
+            _locationManager = [[CLLocationManager alloc] init];
+            _locationManager.delegate = self;
+            _locationManager.distanceFilter = kCLDistanceFilterNone;
+            _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+            if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+                [_locationManager requestWhenInUseAuthorization];
+            }
         }
         [_locationManager startUpdatingLocation];
     }
     //------
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-       didFailWithError:(NSError *)error
-{
-    NSLog(@"Error while getting core location : %@",[error localizedFailureReason]);
-    if ([error code] == kCLErrorDenied) {
-        //you had denied
-    }
-    [manager stopUpdatingLocation];
-}
-
-- (void)locationManager:(CLLocationManager *)locationManager didUpdateLocations:(NSArray *)locations {
-    NSLog(@"%f, %f", locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude);
-    CLLocation *currentLocation = [locations objectAtIndex:0];
-    [locationManager stopUpdatingLocation];
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude);
-    marker.title = @"Current Location";
-    marker.snippet = @"lilbitchass";
-    marker.map = mapView_;
-    
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: currentLocation.coordinate.latitude
-                                                            longitude: currentLocation.coordinate.longitude
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: _locationManager.location.coordinate.latitude
+                                                            longitude: _locationManager.location.coordinate.longitude
                                                                  zoom:13];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.delegate = self;
+    mapView_.myLocationEnabled = YES;
+    mapView_.settings.compassButton = YES;
+    mapView_.settings.myLocationButton = YES;
+    mapView_.myLocationEnabled = YES;
     self.view = mapView_;
+    
+    if (_firstTimeUse) {
+        
+    }
+    
+    [_locationManager stopUpdatingLocation];
+
 }
 
+//- (void)locationManager:(CLLocationManager *)locationManager didUpdateLocations:(NSArray *)locations {
+//    NSLog(@"%f, %f", locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude);
+//    
+////    CLLocation *currentLocation = [locations objectAtIndex:0];
+////    GMSMarker *marker = [[GMSMarker alloc] init];
+////    marker.position = CLLocationCoordinate2DMake(locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude);
+////    marker.title = @"Current Location";
+////    marker.snippet = @"lilbitchass";
+////    marker.map = mapView_;
+//    
+//    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: locationManager.location.coordinate.latitude
+//                                                            longitude: locationManager.location.coordinate.longitude
+//                                                                 zoom:13];
+//    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+//    mapView_.delegate = self;
+//    self.view = mapView_;
+//    [_locationManager stopUpdatingLocation];
+//}
+//
 
 - (void)mapView:(GMSMapView *)mapView
 didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
@@ -82,9 +89,9 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
 }
 
 - (void)dealloc {
-    [mapView_ removeObserver:self
-                  forKeyPath:@"myLocation"
-                     context:NULL];
+//    [mapView_ removeObserver:self
+//                  forKeyPath:@"myLocation"
+//                     context:NULL];
 }
 /*
 #pragma mark - Navigation
