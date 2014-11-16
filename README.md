@@ -15,5 +15,9 @@ Utilizes FireBase, Google Maps, Objective C, XCode
 
 ## TODO
 EVERYTHING
+range with walking vs car
+date range and expiration dates
+seller email shit
+
 
 ## COMPLETED

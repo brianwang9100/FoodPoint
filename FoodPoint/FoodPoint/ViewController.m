@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BuyViewController.h"
 
 @interface ViewController ()
 
@@ -70,6 +71,14 @@
     
     
 }
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"buySegue"]){
+        BuyViewController *controller = (BuyViewController*) segue.destinationViewController;
+        controller.
+    }
+}
+
 
 -(void) sell {
     NSLog(@"SELLBITCH");

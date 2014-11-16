@@ -10,5 +10,5 @@
 #import <Firebase/Firebase.h>
 
 @interface BuyViewController : UIViewController
-
+@property (strong, nonatomic) 
 @end

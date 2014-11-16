@@ -15,6 +15,9 @@
 		17EEB96B1A18070100CB7DEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB96A1A18070100CB7DEC /* SystemConfiguration.framework */; };
 		DF13803D1A180D2A0057522A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DF13803C1A180D2A0057522A /* README.md */; };
 		DF1380401A1819CE0057522A /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF13803F1A1819CE0057522A /* BuyViewController.m */; };
+		DF1380421A182C710057522A /* Buyer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1380411A182C710057522A /* Buyer.m */; };
+		DF1380461A1834A70057522A /* Seller.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1380451A1834A70057522A /* Seller.m */; };
+		DF13804C1A1837540057522A /* Market.m in Sources */ = {isa = PBXBuildFile; fileRef = DF13804B1A1837540057522A /* Market.m */; };
 		DF5F6BC81A17ED8B006E5CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BC71A17ED8B006E5CA6 /* main.m */; };
 		DF5F6BCB1A17ED8B006E5CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCA1A17ED8B006E5CA6 /* AppDelegate.m */; };
 		DF5F6BCE1A17ED8B006E5CA6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */; };
@@ -44,6 +47,12 @@
 		DF13803C1A180D2A0057522A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DF13803E1A1819CE0057522A /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuyViewController.h; path = ../BuyViewController.h; sourceTree = "<group>"; };
 		DF13803F1A1819CE0057522A /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuyViewController.m; path = ../BuyViewController.m; sourceTree = "<group>"; };
+		DF1380411A182C710057522A /* Buyer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Buyer.m; path = ../Buyer.m; sourceTree = "<group>"; };
+		DF1380431A1833F70057522A /* Buyer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Buyer.h; path = ../Buyer.h; sourceTree = "<group>"; };
+		DF1380441A1834A70057522A /* Seller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Seller.h; path = ../Seller.h; sourceTree = "<group>"; };
+		DF1380451A1834A70057522A /* Seller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Seller.m; path = ../Seller.m; sourceTree = "<group>"; };
+		DF13804A1A1837540057522A /* Market.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Market.h; path = ../Market.h; sourceTree = "<group>"; };
+		DF13804B1A1837540057522A /* Market.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Market.m; path = ../Market.m; sourceTree = "<group>"; };
 		DF5F6BC21A17ED8B006E5CA6 /* FoodPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5F6BC61A17ED8B006E5CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF5F6BC71A17ED8B006E5CA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,6 +122,12 @@
 			children = (
 				DF5F6BC91A17ED8B006E5CA6 /* AppDelegate.h */,
 				DF5F6BCA1A17ED8B006E5CA6 /* AppDelegate.m */,
+				DF1380431A1833F70057522A /* Buyer.h */,
+				DF1380411A182C710057522A /* Buyer.m */,
+				DF1380441A1834A70057522A /* Seller.h */,
+				DF1380451A1834A70057522A /* Seller.m */,
+				DF13804A1A1837540057522A /* Market.h */,
+				DF13804B1A1837540057522A /* Market.m */,
 				DF5F6BCC1A17ED8B006E5CA6 /* ViewController.h */,
 				DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */,
 				DF13803E1A1819CE0057522A /* BuyViewController.h */,
@@ -252,11 +267,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1380461A1834A70057522A /* Seller.m in Sources */,
 				DF5F6BCE1A17ED8B006E5CA6 /* ViewController.m in Sources */,
 				DF5F6BCB1A17ED8B006E5CA6 /* AppDelegate.m in Sources */,
 				DF13803D1A180D2A0057522A /* README.md in Sources */,
+				DF1380421A182C710057522A /* Buyer.m in Sources */,
 				DF5F6BC81A17ED8B006E5CA6 /* main.m in Sources */,
 				DF1380401A1819CE0057522A /* BuyViewController.m in Sources */,
+				DF13804C1A1837540057522A /* Market.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
