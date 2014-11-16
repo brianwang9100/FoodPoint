@@ -10,6 +10,7 @@
 
 @implementation SellIntermediateViewController {
     NSUserDefaults *_defaults;
+    BOOL *_addMode
 }
 
 -(void) viewDidLoad {

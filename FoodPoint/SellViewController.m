@@ -97,7 +97,7 @@
         marker.position = CLLocationCoordinate2DMake(point.x, point.y);
         marker.title = snapshot.key;
         marker.appearAnimation = kGMSMarkerAnimationPop;
-        //        marker.snippet = [NSString stringWithFormat:@"%d sellers", snapshot.childrenCount[@"sellers"]];
+        marker.snippet = [NSString stringWithFormat:@"%d sellers and %d buyers", [snapshot.value[@"sellers"] count],[snapshot.value[@"buyers"] count]];
         marker.map = mapView_;
     }];
     

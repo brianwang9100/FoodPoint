@@ -34,10 +34,18 @@
 		DF13806B1A185C650057522A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF13806A1A185C650057522A /* MapKit.framework */; };
 		DF13806F1A188C0D0057522A /* BuyIntermediateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF13806E1A188C0D0057522A /* BuyIntermediateViewController.m */; };
 		DF1380721A188C250057522A /* SellIntermediateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1380711A188C250057522A /* SellIntermediateViewController.m */; };
+		DF1380741A189F570057522A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1380731A189F570057522A /* Main.storyboard */; };
+		DF13807E1A18A1F60057522A /* bg-fp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF1380761A18A1F60057522A /* bg-fp.jpg */; };
+		DF13807F1A18A1F60057522A /* buy-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1380771A18A1F60057522A /* buy-btn.png */; };
+		DF1380801A18A1F60057522A /* car-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1380781A18A1F60057522A /* car-btn.png */; };
+		DF1380811A18A1F60057522A /* guy-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1380791A18A1F60057522A /* guy-bg.png */; };
+		DF1380821A18A1F60057522A /* header-pf.png in Resources */ = {isa = PBXBuildFile; fileRef = DF13807A1A18A1F60057522A /* header-pf.png */; };
+		DF1380831A18A1F60057522A /* sell-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = DF13807B1A18A1F60057522A /* sell-btn.png */; };
+		DF1380841A18A1F60057522A /* walking-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = DF13807C1A18A1F60057522A /* walking-btn.png */; };
+		DF1380851A18A1F60057522A /* wood-pf.png in Resources */ = {isa = PBXBuildFile; fileRef = DF13807D1A18A1F60057522A /* wood-pf.png */; };
 		DF5F6BC81A17ED8B006E5CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BC71A17ED8B006E5CA6 /* main.m */; };
 		DF5F6BCB1A17ED8B006E5CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCA1A17ED8B006E5CA6 /* AppDelegate.m */; };
 		DF5F6BCE1A17ED8B006E5CA6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */; };
-		DF5F6BD11A17ED8B006E5CA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5F6BCF1A17ED8B006E5CA6 /* Main.storyboard */; };
 		DF5F6BD31A17ED8B006E5CA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5F6BD21A17ED8B006E5CA6 /* Images.xcassets */; };
 		DF5F6BD61A17ED8B006E5CA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F6BD41A17ED8B006E5CA6 /* LaunchScreen.xib */; };
 		DF5F6BE21A17ED8B006E5CA6 /* FoodPointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BE11A17ED8B006E5CA6 /* FoodPointTests.m */; };
@@ -89,6 +97,15 @@
 		DF13806E1A188C0D0057522A /* BuyIntermediateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuyIntermediateViewController.m; path = ../BuyIntermediateViewController.m; sourceTree = "<group>"; };
 		DF1380701A188C250057522A /* SellIntermediateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SellIntermediateViewController.h; path = ../SellIntermediateViewController.h; sourceTree = "<group>"; };
 		DF1380711A188C250057522A /* SellIntermediateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SellIntermediateViewController.m; path = ../SellIntermediateViewController.m; sourceTree = "<group>"; };
+		DF1380731A189F570057522A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DF1380761A18A1F60057522A /* bg-fp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg-fp.jpg"; sourceTree = "<group>"; };
+		DF1380771A18A1F60057522A /* buy-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buy-btn.png"; sourceTree = "<group>"; };
+		DF1380781A18A1F60057522A /* car-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car-btn.png"; sourceTree = "<group>"; };
+		DF1380791A18A1F60057522A /* guy-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guy-bg.png"; sourceTree = "<group>"; };
+		DF13807A1A18A1F60057522A /* header-pf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header-pf.png"; sourceTree = "<group>"; };
+		DF13807B1A18A1F60057522A /* sell-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sell-btn.png"; sourceTree = "<group>"; };
+		DF13807C1A18A1F60057522A /* walking-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "walking-btn.png"; sourceTree = "<group>"; };
+		DF13807D1A18A1F60057522A /* wood-pf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wood-pf.png"; sourceTree = "<group>"; };
 		DF5F6BC21A17ED8B006E5CA6 /* FoodPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5F6BC61A17ED8B006E5CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF5F6BC71A17ED8B006E5CA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,7 +113,6 @@
 		DF5F6BCA1A17ED8B006E5CA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DF5F6BCC1A17ED8B006E5CA6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DF5F6BD01A17ED8B006E5CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF5F6BD21A17ED8B006E5CA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DF5F6BD51A17ED8B006E5CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DF5F6BDB1A17ED8B006E5CA6 /* FoodPointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +155,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF1380751A18A1F60057522A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DF1380761A18A1F60057522A /* bg-fp.jpg */,
+				DF1380771A18A1F60057522A /* buy-btn.png */,
+				DF1380781A18A1F60057522A /* car-btn.png */,
+				DF1380791A18A1F60057522A /* guy-bg.png */,
+				DF13807A1A18A1F60057522A /* header-pf.png */,
+				DF13807B1A18A1F60057522A /* sell-btn.png */,
+				DF13807C1A18A1F60057522A /* walking-btn.png */,
+				DF13807D1A18A1F60057522A /* wood-pf.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		DF5F6BB91A17ED8B006E5CA6 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +196,7 @@
 				DF5F6BC41A17ED8B006E5CA6 /* FoodPoint */,
 				DF5F6BDE1A17ED8B006E5CA6 /* FoodPointTests */,
 				DF5F6BC31A17ED8B006E5CA6 /* Products */,
+				DF1380751A18A1F60057522A /* Images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,7 +231,7 @@
 				17EEB96F1A18767F00CB7DEC /* SellViewController.m */,
 				DF1380701A188C250057522A /* SellIntermediateViewController.h */,
 				DF1380711A188C250057522A /* SellIntermediateViewController.m */,
-				DF5F6BCF1A17ED8B006E5CA6 /* Main.storyboard */,
+				DF1380731A189F570057522A /* Main.storyboard */,
 				DF5F6BD21A17ED8B006E5CA6 /* Images.xcassets */,
 				DF5F6BD41A17ED8B006E5CA6 /* LaunchScreen.xib */,
 				DF5F6BC51A17ED8B006E5CA6 /* Supporting Files */,
@@ -322,10 +354,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF5F6BD11A17ED8B006E5CA6 /* Main.storyboard in Resources */,
+				DF1380841A18A1F60057522A /* walking-btn.png in Resources */,
+				DF1380831A18A1F60057522A /* sell-btn.png in Resources */,
+				DF1380851A18A1F60057522A /* wood-pf.png in Resources */,
+				DF1380821A18A1F60057522A /* header-pf.png in Resources */,
+				DF1380811A18A1F60057522A /* guy-bg.png in Resources */,
+				DF13807E1A18A1F60057522A /* bg-fp.jpg in Resources */,
 				DF5F6BD61A17ED8B006E5CA6 /* LaunchScreen.xib in Resources */,
 				DF5F6BD31A17ED8B006E5CA6 /* Images.xcassets in Resources */,
+				DF13807F1A18A1F60057522A /* buy-btn.png in Resources */,
 				DF1380541A184AB30057522A /* GoogleMaps.bundle in Resources */,
+				DF1380801A18A1F60057522A /* car-btn.png in Resources */,
+				DF1380741A189F570057522A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,14 +417,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DF5F6BCF1A17ED8B006E5CA6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DF5F6BD01A17ED8B006E5CA6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DF5F6BD41A17ED8B006E5CA6 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

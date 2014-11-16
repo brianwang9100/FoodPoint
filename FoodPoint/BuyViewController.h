@@ -17,6 +17,7 @@
 @property (strong, nonatomic) Buyer *thisBuyer;
 @property(nonatomic,retain) CLLocationManager *locationManager;
 @property (assign, nonatomic) BOOL firstTimeUse;
+@property (assign, nonatomic) BOOL trans;
 
 
 @end

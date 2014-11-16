@@ -11,6 +11,7 @@
 
 @implementation BuyIntermediateViewController {
     NSUserDefaults *_defaults;
+    BOOL _trans;
 }
 
 -(void) viewDidLoad {
@@ -34,8 +35,8 @@
         _messageLabel.hidden = FALSE;
         return;
     }
-    
-    [self performSegueWithIdentifier:@"walkSegue" sender:self];
+    _trans = false;
+    [self performSegueWithIdentifier:@"segue" sender:self];
 }
 
 -(void) drive {
@@ -43,17 +44,15 @@
         _messageLabel.hidden = FALSE;
         return;
     }
-    
-    [self performSegueWithIdentifier:@"driveSegue" sender:self];
+    _trans = true;
+    [self performSegueWithIdentifier:@"segue" sender:self];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"walkSegue"] || [segue.identifier isEqualToString:@"driveSegue"]) {
+    if([segue.identifier isEqualToString:@"segue"]) {
         BuyViewController *controller = (BuyViewController*) segue.destinationViewController;
-        Buyer* myBuyer = [[Buyer alloc] initWithName:_nameTextField.text withEmail:_emailTextField.text withTrans:false];
-        if ([segue.identifier isEqualToString:@"driveSegue"]) {
-            myBuyer.trans = true;
-        }
+        Buyer* myBuyer = [[Buyer alloc] initWithName:_nameTextField.text withEmail:_emailTextField.text];
+        controller.trans = _trans;
         controller.thisBuyer = myBuyer;
     }
 }

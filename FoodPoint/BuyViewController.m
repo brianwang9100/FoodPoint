@@ -63,8 +63,8 @@
     NSDictionary *buyer = @{
                             @"lat": [NSString stringWithFormat: @"%f", _locationManager.location.coordinate.latitude],
                             @"lon": [NSString stringWithFormat:@"%f", _locationManager.location.coordinate.longitude],
-                            @"email": (NSString*)_thisBuyer.email,
-                            @"trans": [NSString stringWithFormat: @"%d", _thisBuyer.trans ]
+                            @"email": _thisBuyer.email,
+                            @"trans": [NSString stringWithFormat: @"%d", _trans]
                             };
     
     Firebase *newBuyerRef = [buyersRef childByAppendingPath: _thisBuyer.name];
@@ -80,7 +80,7 @@
         marker.position = CLLocationCoordinate2DMake(point.x, point.y);
         marker.title = @"Selected Market";
         marker.appearAnimation = kGMSMarkerAnimationPop;
-//        marker.snippet = [NSString stringWithFormat:@"%d sellers", snapshot.childrenCount[@"sellers"]];
+        marker.snippet = [NSString stringWithFormat:@"%d sellers", [snapshot.value[@"sellers"] count]];
         marker.map = mapView_;
     }];
     
