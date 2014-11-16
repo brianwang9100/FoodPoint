@@ -43,7 +43,7 @@
 //    //2014-11-16 00:36:56.127 FoodPoint[20767:15745955] 34.540000, 45.345323
 //    //2014-11-16 00:36:56.127 FoodPoint[20767:15745955] 1.000000, 3.000000
 //}];
-//
+//   
 //
 //[[marketsRef queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
 //    CGPoint point = [self convertToLocation: snapshot];

@@ -14,6 +14,7 @@
 		17EEB9691A1806F300CB7DEC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB9681A1806F300CB7DEC /* CFNetwork.framework */; };
 		17EEB96B1A18070100CB7DEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EEB96A1A18070100CB7DEC /* SystemConfiguration.framework */; };
 		17EEB96D1A18745700CB7DEC /* firebaseFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EEB96C1A18745700CB7DEC /* firebaseFunc.m */; };
+		17EEB9701A18767F00CB7DEC /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EEB96F1A18767F00CB7DEC /* SellViewController.m */; };
 		DF13803D1A180D2A0057522A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DF13803C1A180D2A0057522A /* README.md */; };
 		DF1380401A1819CE0057522A /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF13803F1A1819CE0057522A /* BuyViewController.m */; };
 		DF1380421A182C710057522A /* Buyer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1380411A182C710057522A /* Buyer.m */; };
@@ -58,6 +59,8 @@
 		17EEB9681A1806F300CB7DEC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		17EEB96A1A18070100CB7DEC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		17EEB96C1A18745700CB7DEC /* firebaseFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firebaseFunc.m; sourceTree = "<group>"; };
+		17EEB96E1A18767F00CB7DEC /* SellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SellViewController.h; path = ../SellViewController.h; sourceTree = "<group>"; };
+		17EEB96F1A18767F00CB7DEC /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SellViewController.m; path = ../SellViewController.m; sourceTree = "<group>"; };
 		DF13803C1A180D2A0057522A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DF13803E1A1819CE0057522A /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuyViewController.h; path = ../BuyViewController.h; sourceTree = "<group>"; };
 		DF13803F1A1819CE0057522A /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuyViewController.m; path = ../BuyViewController.m; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */,
 				DF13803E1A1819CE0057522A /* BuyViewController.h */,
 				DF13803F1A1819CE0057522A /* BuyViewController.m */,
+				17EEB96E1A18767F00CB7DEC /* SellViewController.h */,
+				17EEB96F1A18767F00CB7DEC /* SellViewController.m */,
 				DF5F6BCF1A17ED8B006E5CA6 /* Main.storyboard */,
 				DF5F6BD21A17ED8B006E5CA6 /* Images.xcassets */,
 				DF5F6BD41A17ED8B006E5CA6 /* LaunchScreen.xib */,
@@ -336,6 +341,7 @@
 				DF1380421A182C710057522A /* Buyer.m in Sources */,
 				DF5F6BC81A17ED8B006E5CA6 /* main.m in Sources */,
 				DF1380401A1819CE0057522A /* BuyViewController.m in Sources */,
+				17EEB9701A18767F00CB7DEC /* SellViewController.m in Sources */,
 				DF13804C1A1837540057522A /* Market.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
