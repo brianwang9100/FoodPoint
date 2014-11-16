@@ -10,9 +10,5 @@
 #import <Firebase/Firebase.h>
 
 @interface ViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
-@property (strong, nonatomic) IBOutlet UILabel *messageLabel;
-@property (strong, nonatomic) IBOutlet UIButton *buyButton;
-@property (strong, nonatomic) IBOutlet UIButton *sellButton;
 @end
 

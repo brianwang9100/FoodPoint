@@ -32,6 +32,8 @@
 		DF1380641A184BE90057522A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1380631A184BE90057522A /* OpenGLES.framework */; };
 		DF1380661A184BEF0057522A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1380651A184BEF0057522A /* QuartzCore.framework */; };
 		DF13806B1A185C650057522A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF13806A1A185C650057522A /* MapKit.framework */; };
+		DF13806F1A188C0D0057522A /* BuyIntermediateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF13806E1A188C0D0057522A /* BuyIntermediateViewController.m */; };
+		DF1380721A188C250057522A /* SellIntermediateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1380711A188C250057522A /* SellIntermediateViewController.m */; };
 		DF5F6BC81A17ED8B006E5CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BC71A17ED8B006E5CA6 /* main.m */; };
 		DF5F6BCB1A17ED8B006E5CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCA1A17ED8B006E5CA6 /* AppDelegate.m */; };
 		DF5F6BCE1A17ED8B006E5CA6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */; };
@@ -83,6 +85,10 @@
 		DF1380651A184BEF0057522A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DF13806A1A185C650057522A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DF13806C1A185C830057522A /* FoodPoint.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FoodPoint.entitlements; sourceTree = "<group>"; };
+		DF13806D1A188C0D0057522A /* BuyIntermediateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuyIntermediateViewController.h; path = ../BuyIntermediateViewController.h; sourceTree = "<group>"; };
+		DF13806E1A188C0D0057522A /* BuyIntermediateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuyIntermediateViewController.m; path = ../BuyIntermediateViewController.m; sourceTree = "<group>"; };
+		DF1380701A188C250057522A /* SellIntermediateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SellIntermediateViewController.h; path = ../SellIntermediateViewController.h; sourceTree = "<group>"; };
+		DF1380711A188C250057522A /* SellIntermediateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SellIntermediateViewController.m; path = ../SellIntermediateViewController.m; sourceTree = "<group>"; };
 		DF5F6BC21A17ED8B006E5CA6 /* FoodPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5F6BC61A17ED8B006E5CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF5F6BC71A17ED8B006E5CA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -187,8 +193,12 @@
 				DF5F6BCD1A17ED8B006E5CA6 /* ViewController.m */,
 				DF13803E1A1819CE0057522A /* BuyViewController.h */,
 				DF13803F1A1819CE0057522A /* BuyViewController.m */,
+				DF13806D1A188C0D0057522A /* BuyIntermediateViewController.h */,
+				DF13806E1A188C0D0057522A /* BuyIntermediateViewController.m */,
 				17EEB96E1A18767F00CB7DEC /* SellViewController.h */,
 				17EEB96F1A18767F00CB7DEC /* SellViewController.m */,
+				DF1380701A188C250057522A /* SellIntermediateViewController.h */,
+				DF1380711A188C250057522A /* SellIntermediateViewController.m */,
 				DF5F6BCF1A17ED8B006E5CA6 /* Main.storyboard */,
 				DF5F6BD21A17ED8B006E5CA6 /* Images.xcassets */,
 				DF5F6BD41A17ED8B006E5CA6 /* LaunchScreen.xib */,
@@ -337,7 +347,9 @@
 				17EEB96D1A18745700CB7DEC /* firebaseFunc.m in Sources */,
 				DF5F6BCE1A17ED8B006E5CA6 /* ViewController.m in Sources */,
 				DF5F6BCB1A17ED8B006E5CA6 /* AppDelegate.m in Sources */,
+				DF13806F1A188C0D0057522A /* BuyIntermediateViewController.m in Sources */,
 				DF13803D1A180D2A0057522A /* README.md in Sources */,
+				DF1380721A188C250057522A /* SellIntermediateViewController.m in Sources */,
 				DF1380421A182C710057522A /* Buyer.m in Sources */,
 				DF5F6BC81A17ED8B006E5CA6 /* main.m in Sources */,
 				DF1380401A1819CE0057522A /* BuyViewController.m in Sources */,

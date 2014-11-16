@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _thisBuyer = [[Buyer alloc] initWithName:@"BitchAss" withEmail: @"bitchass@gmail.com" withTrans:true];
+//    _thisBuyer = [[Buyer alloc] initWithName:@"BitchAss" withEmail: @"bitchass@gmail.com" withTrans:true];
     
     [self currentLocationIdentifier];
     
@@ -44,7 +44,7 @@
     //------
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: _locationManager.location.coordinate.latitude
                                                             longitude: _locationManager.location.coordinate.longitude
-                                                                 zoom:13];
+                                                                 zoom:12];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.delegate = self;
     mapView_.myLocationEnabled = YES;
@@ -63,7 +63,7 @@
     NSDictionary *buyer = @{
                             @"lat": [NSString stringWithFormat: @"%f", _locationManager.location.coordinate.latitude],
                             @"lon": [NSString stringWithFormat:@"%f", _locationManager.location.coordinate.longitude],
-                            @"email": _thisBuyer.email,
+                            @"email": (NSString*)_thisBuyer.email,
                             @"trans": [NSString stringWithFormat: @"%d", _thisBuyer.trans ]
                             };
     
@@ -75,9 +75,8 @@
         CGPoint point = [self convertToLocation: snapshot];
         NSLog([NSString stringWithFormat:@"%f, %f", point.x, point.y]);
         
-        if (GMSGeometryIsLocationOnPathTolerance(point.x, point.y, <#GMSPath *path#>, <#BOOL geodesic#>, <#CLLocationDistance tolerance#>))
-        
-        GMSMarker *marker = [GMSMarker markerImageWithColor:[UIColor blueColor]];
+        GMSMarker *marker = [[GMSMarker alloc] init];
+        marker.icon = [GMSMarker markerImageWithColor: [UIColor blueColor]];
         marker.position = CLLocationCoordinate2DMake(point.x, point.y);
         marker.title = @"Selected Market";
         marker.appearAnimation = kGMSMarkerAnimationPop;

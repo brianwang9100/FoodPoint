@@ -18,4 +18,5 @@
 @property(nonatomic,retain) CLLocationManager *locationManager;
 @property (assign, nonatomic) BOOL firstTimeUse;
 
+
 @end
