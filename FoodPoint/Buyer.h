@@ -11,5 +11,5 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (assign, nonatomic) BOOL walking;
-
+-(id) initWithName:(NSString*) name withWalking: (BOOL) walking;
 @end

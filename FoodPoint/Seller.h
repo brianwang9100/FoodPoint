@@ -11,5 +11,5 @@
 @interface Seller : NSObject
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *email;
-
+-(id) initWithName:(NSString*) name withEmail: (NSString*) email;
 @end

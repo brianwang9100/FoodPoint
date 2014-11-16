@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <Firebase/Firebase.h>
+#import "Buyer.h"
+#import <CoreLocation/CoreLocation.h>
+#import <GoogleMaps/GoogleMaps.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface BuyViewController : UIViewController
-@property (strong, nonatomic) 
+@interface BuyViewController : UIViewController<CLLocationManagerDelegate>
+@property (strong, nonatomic) Buyer *thisBuyer;
+@property(nonatomic,retain) CLLocationManager *locationManager;
+
 @end

@@ -13,5 +13,9 @@
 @property (assign, nonatomic) float lon;
 @property (assign, nonatomic) int thisHashCode;
 @property (strong, nonatomic) NSDateComponents *date;
-
+-(id) initWithLat:(float) lat
+          withLon:(float) lon
+        withMonth:(int) month
+          withDay:(int) day
+         withYear:(int) year;
 @end

@@ -15,6 +15,7 @@
 
 @implementation ViewController {
     NSUserDefaults *_defaults;
+    BOOL _walking;
 }
 
 - (void)viewDidLoad {
@@ -25,11 +26,14 @@
     _nameTextField.delegate = self;
     _nameTextField.placeholder = @"Your Name Here";
     
+    //CHANGELATER
+    //TODO: FIX WALKING VIA SEGMENTED CONTROL
+    _walking = true;
+    
     [_buyButton addTarget:self action:@selector(buy) forControlEvents:UIControlEventTouchUpInside];
     [_sellButton addTarget:self action:@selector(sell) forControlEvents:UIControlEventTouchUpInside];
     
     _defaults = [NSUserDefaults standardUserDefaults];
-    
     
     
 }
@@ -75,7 +79,8 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"buySegue"]){
         BuyViewController *controller = (BuyViewController*) segue.destinationViewController;
-        controller.
+        Buyer *myBuyer = [[Buyer alloc] initWithName:_nameTextField.text withWalking: _walking];
+        controller.thisBuyer = myBuyer;
     }
 }
 
