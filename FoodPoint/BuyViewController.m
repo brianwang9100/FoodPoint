@@ -58,6 +58,7 @@
 
 }
 
+
 //- (void)locationManager:(CLLocationManager *)locationManager didUpdateLocations:(NSArray *)locations {
 //    NSLog(@"%f, %f", locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude);
 //    
