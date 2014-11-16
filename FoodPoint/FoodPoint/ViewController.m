@@ -7,11 +7,6 @@
 //
 
 #import "ViewController.h"
-<<<<<<< HEAD
-#import <Firebase/Firebase.h>
-=======
-#import "BuyViewController.h"
->>>>>>> c9be2678b940a36ed9be5439c1a7508efd093e8a
 
 @interface ViewController ()
 
@@ -19,7 +14,6 @@
 
 @implementation ViewController {
     NSUserDefaults *_defaults;
-    BOOL _walking;
 }
 
 - (void)viewDidLoad {
@@ -30,21 +24,13 @@
     _nameTextField.delegate = self;
     _nameTextField.placeholder = @"Your Name Here";
     
-    //CHANGELATER
-    //TODO: FIX WALKING VIA SEGMENTED CONTROL
-    _walking = true;
-    
     [_buyButton addTarget:self action:@selector(buy) forControlEvents:UIControlEventTouchUpInside];
     [_sellButton addTarget:self action:@selector(sell) forControlEvents:UIControlEventTouchUpInside];
     
     _defaults = [NSUserDefaults standardUserDefaults];
     
     
-<<<<<<< HEAD
 
-=======
-}
->>>>>>> c9be2678b940a36ed9be5439c1a7508efd093e8a
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [_nameTextField resignFirstResponder];
@@ -83,22 +69,6 @@
     
     
 }
-
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"buySegue"]){
-        BuyViewController *controller = (BuyViewController*) segue.destinationViewController;
-        Buyer *myBuyer = [[Buyer alloc] initWithName:_nameTextField.text withWalking: _walking];
-        controller.thisBuyer = myBuyer;
-        controller.firstTimeUse = false;
-        if ([_defaults boolForKey:@"alreadyUsed"] == false) {
-            controller.firstTimeUse = true;
-        }
-        
-        [_defaults setBool:true forKey:@"alreadyUsed"];
-        [_defaults synchronize];
-    }
-}
-
 
 -(void) sell {
     NSLog(@"SELLBITCH");
