@@ -21,7 +21,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    _thisBuyer = [[Buyer alloc] initWithName:@"BitchAss" withEmail: @"bitchass@gmail.com" withTrans:true];
-    
     [self currentLocationIdentifier];
     
 }
@@ -59,14 +58,14 @@
     Firebase *buyersRef = [rootRef childByAppendingPath: @"buyers"];
     Firebase *marketsRef = [rootRef childByAppendingPath: @"markets"];
     
+
     //sending buyer information
     NSDictionary *buyer = @{
                             @"lat": [NSString stringWithFormat: @"%f", _locationManager.location.coordinate.latitude],
                             @"lon": [NSString stringWithFormat:@"%f", _locationManager.location.coordinate.longitude],
-                            @"email": @"mattieoha@gmail.com",
-                            @"trans": [NSString stringWithFormat: @"%d", _trans]
+                            @"email" : @"mattieoha@gmail.com",
+                            @"trans": [NSString stringWithFormat: @"%d", _trans],
                             };
-    
     Firebase *newBuyerRef = [buyersRef childByAppendingPath: _thisBuyer.name];
     [newBuyerRef setValue: buyer];
     
@@ -148,7 +147,7 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
 */
 
 -(void) setEmail: (NSString *) email {
-    NSLog(email);
+
     _email = email;
-}
+} 
 @end

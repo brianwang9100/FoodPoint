@@ -54,6 +54,15 @@
         Firebase *newSellerRef = [marketsBuyersRef childByAppendingPath: _thisBuyer.name];
         [newSellerRef setValue: buyer];
         
+        NSDictionary *request = @{
+                                  @"name": @"Bob",
+                                  @"email": @"mattieoha@gmail.com",
+                                  @"nameOfMarket" : @"Durham Farmers Market",
+                                  @"dateOfMarket" : _date
+                                  };
+        
+        Firebase *frequest = [rootRef childByAppendingPath: @"requestBuyer/currentRequest"];
+        [frequest setValue: request];
         _messageLabel.text = [NSString stringWithFormat:@"%@ has been added!", _thisBuyer.name];
         _sent = true;
     }

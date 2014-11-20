@@ -57,13 +57,13 @@
         //mail
         
         NSDictionary *request = @{
-                                  @"name": @"Matt",
+                                  @"name": @"Rick",
                                   @"email": @"mattieoha@gmail.com",
-                                  @"nameOfMarket" : _nameOfMarket,
+                                  @"nameOfMarket" : @"Durham Farmers Market",
                                   @"dateOfMarket" : _date
                                   };
         
-        Firebase *frequest = [rootRef childByAppendingPath: @"requests/currentRequest"];
+        Firebase *frequest = [rootRef childByAppendingPath: @"requestSeller/currentRequest"];
         [frequest setValue: request];
         _messageLabel.text = @"Sent!";
         _sent = true;
